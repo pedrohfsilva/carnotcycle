@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nossa ONG</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <script src="https://kit.fontawesome.com/a10e5ec1fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="retangulo">
+            <div class="logotipo">
+                <img src="imagens/logo.png" alt="Logotipo da empresa">
+            </div>
+            <h1 class="titulo">Carnot Cycle <span style="color: #fff8">-</span> Locação de veículos</h1>
+        </div>
+        <div class="triangulo"></div>
+        <img class="top-image" id="top-image4" src="imagens/top-image4.jpg" alt="imagem">
+    </header>
+
+    <nav class="menu-navegacao">
+        <a href="index.html"><i class="fas fa-home"></i> Página inicial</a>
+        <span>|</span>
+        <a href="valor_locacao.html"><i class="fas fa-dollar-sign"></i> Valor de locação</a>
+        <span>|</span>
+        <a href="consumo_veiculo.html"><i class="fas fa-car"></i> Consumo do veículo</a>
+        <span>|</span>
+        <a href="tipo_combustivel.html"><i class="fas fa-gas-pump"></i> Tipo de combustível</a>
+    </nav>
+
+    <main class="with-padding">
+        <form class="formulario">
+            <h1>Tipo de combustível</h1>
+            <section class="fields">
+                <div class="container">
+                    <input type="text" class="input-form" name="preco-gasolina" id="preco-gasolina" required>
+                    <label for="preco-gasolina">Preço da gasolina (R$)</label>
+                </div>
+                <div class="container">
+                    <input type="text" class="input-form" name="preco-etanol" id="preco-etanol" required>
+                    <label for="preco-etanol">Preço do etanol (R$)</label>
+                </div>
+                <div class="container">
+                    <input type="text" class="input-form" name="tipo-combustivel" id="tipo-combustivel" readonly>
+                    <label for="tipo-combustivel">Combustível mais vantajoso</label>
+                    <input type="button" value="Comparar" id="button" onclick="showResult()">
+                </div>
+            </section>
+        </form>
+        <div id="tipo-combustivel"></div>
+    </main>
+
+    <footer class="rodape">
+        <p>Carnot Cycle - Todos os direitos reservados - 2030</p>
+        <div class="contato">
+            <a class="icon" href="https://instagram.com/pedrohf_silva" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="icon" href="https://facebook.com" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="icon" href="https://web.whatsapp.com/" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="icon" href="https://www.tiktok.com/" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a class="icon" href="https://twitter.com/twitter" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+        <script src="scripts/tipo_combustivel.js"></script>
+    </footer>
+</body>
+</html>

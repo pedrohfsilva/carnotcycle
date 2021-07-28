@@ -1,0 +1,273 @@
+:root {
+    --light-color: #73b3fb;
+    --footer-color: #6393ec;
+    --header-color: #32649e;
+    --dark-color: #244b77;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    background-color: #eee;
+}
+
+main {
+    min-height: calc(100vh - 250px);
+}
+
+main.with-padding {
+    padding: 40px;
+}
+
+.cabecalho {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-bottom: 12px solid var(--header-color);
+}
+
+.retangulo {
+    width: 70%;
+    height: 100%;
+    background-color: var(--header-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    border-top: 12px solid var(--header-color);
+}
+
+.triangulo {
+    width: 0;
+    height: 0;
+    border: none;
+    border-top: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid var(--header-color);
+    border-left: 60px solid var(--header-color);
+    position: absolute;
+    top: 0;
+    left: 70%;
+}
+
+.top-image {
+    width: 30%;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+}
+
+#top-image1 {
+    top: -80px;
+}
+#top-image2 {
+    top: -40px;
+}
+#top-image3 {
+    top: -60px;
+}
+#top-image4 {
+    top: -60px;
+}
+
+.logotipo {
+    width: 20%;
+    height: 100%;
+    border-right: 4px solid #fff8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logotipo img {
+    width: 50%;
+}
+
+.titulo {
+    font: bold 40px Arial, sans-serif;
+    color: #fff;
+    margin-left: 40px;
+}
+
+.menu-navegacao {
+    width: 100%;
+    height: 50px;
+    background-color: var(--footer-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 10px #0006;
+}
+
+.menu-navegacao a {
+    text-decoration: none;
+    font: normal 24px Arial, sans-serif;
+    color: #111;
+    padding: 10px;
+    transition: transform 200ms;
+}
+
+.menu-navegacao a:hover {
+    transform: translateY(-6%);
+}
+
+.menu-navegacao span {
+    font: normal 20px Arial, sans-serif;
+    color: #444;
+}
+
+
+.rodape {
+    width: 100%;
+    height: 80px;
+    background-color: var(--footer-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 50px;
+    box-shadow: 0 0 10px #0006;
+}
+
+.rodape p {
+    font: normal 24px Arial, sans-serif;
+    color: #111;
+}
+
+.rodape .contato {
+    width: 20%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodape .contato .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #0006;
+    border: 3px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 200ms, border-color 200ms;
+}
+
+.rodape .contato .icon:hover {
+    background-color: transparent;
+    border-color: #0006;
+}
+
+.rodape .contato i {
+    font-size: 20px;
+    color: #fff;
+    transition: color 200ms;
+}
+
+.rodape .contato .icon:hover i {
+    color: #0006;
+}
+
+
+.formulario {
+    width: 1000px;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-shadow: 0 0 12px #0004;
+    position: relative;
+}
+
+.formulario .fields {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.formulario h1 {
+    font: bold 40px Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--header-color);
+}
+
+.formulario .container {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.formulario .input-form {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 3px solid #888;
+    outline: none;
+    font: normal 24px Arial, sans-serif;
+    color: #222;
+    transition: border-bottom-color 500ms;
+}
+
+.formulario #valor-locacao,
+.formulario #tipo-combustivel,
+.formulario #consumo-veiculo {
+    pointer-events: none;
+    width: 60%;
+    display: inline-block;
+}
+
+.formulario .input-form + label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font: normal 24px Arial, sans-serif;
+    color: #888;
+    line-height: 40px;
+    pointer-events: none;
+    transition: 500ms;
+}
+
+.formulario .input-form:focus,
+.formulario .input-form:valid,
+.formulario .input-form.result {
+    border-bottom-color: var(--header-color);
+}
+
+.formulario .input-form:focus + label,
+.formulario .input-form:valid + label,
+.formulario .input-form.result + label {
+    top: -80%;
+    font-size: 20px;
+    color: var(--header-color);
+}
+
+.formulario input[type="button"] {
+    width: 20%;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ddd;
+    font: normal 24px Arial, sans-serif;
+    color: #222;
+    cursor: pointer;
+    margin-left: 19.4%;
+    transition: background-color 200ms;
+    display: inline-block;
+}
+
+.formulario input[type="button"]:hover {
+    background-color: #ccc;
+}
